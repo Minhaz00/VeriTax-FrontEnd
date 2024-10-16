@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'VeriTax-FrontEnd/version.txt'
+      - 'version.txt'
 
 jobs:
   notify-deps2dev:
@@ -16,7 +16,7 @@ jobs:
 
       - name: Read version
         id: version
-        run: echo "::set-output name=VERSION::$(cat VeriTax-FrontEnd/version.txt)"
+        run: echo "::set-output name=VERSION::$(cat version.txt)"
 
       - name: Notify deps2.dev
         run: |
